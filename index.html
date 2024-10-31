@@ -10,23 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-        <script type="text/javascript">
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
-            },
-            chtml: {
-                displayAlign: 'left'
-            }
-        };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-    <style>
-        .mjx-math {
-            white-space: nowrap;
-        }
-    </style>
+       <script type="text/javascript">
+    MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+        options: {skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']}
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
     <!--link for emoji-->
     <script src="https://kit.fontawesome.com/12c29c871e.js" crossorigin="anonymous"></script>
     <script type="text/x-mathjax-config">
@@ -162,7 +153,7 @@
        <div class="v1"> <video src="L32new.mp4" controls> </video>  </div>
        <div class="v2"> <video src="L28new.mp4" controls ></video>  </div>
    <div><p class="paper" data-aos="fade-down" data-aos-offset="200" data-aos-duration="800">In this study, I show simulations of protostar-driven photoionization in Herbig-Haro Jets. We compare two different evolutionary simulations, 
-       corresponding to a high luminosity case ($L_{X} = 10^{32} \, \text{erg/s}$, upper movie) and a low luminosity case ($L_{X} = 10^{28} \, \text{erg/s}$, lower movie).
+       corresponding to a high luminosity case ($L_{X} = 10^{32} \, \mathrm{erg/s}$, upper movie) and a low luminosity case ($L_{X} = 10^{28} \, \text{erg/s}$, lower movie).
        While the latter does not produce any noticeable difference in the amount of ionization when compared to the purely radiative case (see paper <span class="ref">[Z. Ahmane et al., 2020]</span>),
        the former results in an appreciably larger ionization rate. Close to the central object, we now observe almost $\approx 50 \%$ ionization degree, lowering to $\approx 10 \%$ at large distances. Ions can survive large distance propagation owing to the rather 
        long recombination scale.</p></div>
