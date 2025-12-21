@@ -216,8 +216,8 @@ nav .aa:hover::before{
   left: 0;
   padding-left: 100px;
   color: var(--forth-color);
-  font-size: 80px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 300;
   line-height: 1.05;
 }
 
@@ -225,7 +225,7 @@ nav .aa:hover::before{
   color: var(--forth-color);
   width: 430px;
   position:absolute;
-  top: 300px;
+  top: 150px;
   left: 0;
   padding-left: 100px;
   font-weight: 300;
@@ -268,7 +268,7 @@ nav .aa:hover::before{
 /* Hero CV button - Prominent */
 .hero-btn {
   position: absolute;
-  top: 420px;
+  top: 300px;
   left: 0;
   padding-left: 100px;
   width: 430px;
@@ -344,7 +344,7 @@ nav .aa:hover::before{
   }
   
   /* Text */
-  .p2 { top: 100px !important; font-size: 50px !important; }
+  .p2 { top: 100px !important; font-size: 20px !important; }
   .p3 { top: 220px !important; width: 90% !important; padding-left: 20px !important; }
 }
 
