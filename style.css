@@ -216,7 +216,7 @@ nav .aa:hover::before{
   left: 0;
   padding-left: 100px;
   color: var(--forth-color);
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 1.05;
 }
