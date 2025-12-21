@@ -1,665 +1,731 @@
-/* rgb(50,51,67)  rgb(41,41,58)  rgb(236,203,54)*/
+/* ========= ZOUBIDA AHMANE — IMPROVED + RESPONSIVE CSS ========= */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* If you already load Poppins in HTML, you can remove this @import. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 *{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-   
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --primary-color: #eddcd9;
+  --secondary-color: rgb(230,147,157);
+  --third-color: rgb(242,242,242);
+  --forth-color: rgb(68,68,68);
+
+  --header-h: 60px;
+  --pad-desktop: 50px;
+  --pad-mobile: 16px;
+  --radius: 14px;
 }
 
 .dark-theme{
-    --primary-color: rgb(30,30,32) ;  
-    --secondary-color: rgb(204,60,27); /*rgb(57,100,220);*/ /*rgb(68, 34, 100); *//*  75,29,101 */
-    --third-color: rgb(35,35,35); /*rgb(96, 82, 109) ;*/ /*    100, 81, 111    */
-    --forth-color:#fff ;  
+  --primary-color: rgb(30,30,32);
+  --secondary-color: rgb(204,60,27);
+  --third-color: rgb(35,35,35);
+  --forth-color:#fff;
 }
-
-:root{
-    --primary-color: #eddcd9;  /* */
-    --secondary-color: rgb(230,147,157);/*  */    /*  #ed7b7b; */
-    --third-color: rgb(242,242,242);    /*#f2ebe9;*/
-    --forth-color:rgb(68,68,68); 
-
-}
-
-
-/*
-:root{
-    --primary-color: #eddcd9;  
-    --secondary-color: #de5499;
-    --third-color: #f8eded;   
-    --forth-color:#264143; 
-
-}
-*/
-
-/*:root{
-    --primary-color: rgb(41,41,58) ;  
-    --secondary-color:rgb(236,203,54);
-    --third-color: rgb(50, 50, 69) ;
-    --forth-color:white;  
-}*/
 
 body{
-    background-color:var(--primary-color) ;
-}
-#icon{width:30px;
-height: 30px;
-padding-top: 15px;
-cursor:pointer;
+  background-color: var(--primary-color);
+  color: var(--forth-color);
+  overflow-x: hidden;
 }
 
-/************************************
-     Header/logo/nav part
-*************************************/
+/* Optional helpers (used if your HTML includes them) */
+.skip-link{
+  position:absolute;
+  top:-100px;
+  left: 10px;
+  background: var(--third-color);
+  color: var(--secondary-color);
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  z-index: 9999;
+}
+.skip-link:focus{ top: 10px; }
+
+.sr-only{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);
+  border:0;
+}
+
+/* ================= HEADER / NAV ================= */
 
 header{
-    width:100%;
-    height:60px;
-    background-color: var(--third-color) ;
-    position:fixed;
-    z-index:50;
+  width:100%;
+  height: var(--header-h);
+  background-color: var(--third-color);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:50;
+
+  display:flex;
+  align-items:center;
+  gap: 18px;
+  padding: 0 var(--pad-desktop);
 }
 
+/* Logo */
 .logo{
-    padding-top:10px;
-    padding-left: 50px;
-    font-style: oblique;
-    float:left;
-    font-size:28px;
-    width:200px;
-    height: 50px;
-    font-weight: 900;
-    cursor:pointer;
-    font-family: serif ;
+  font-style: oblique;
+  font-size: 28px;
+  font-weight: 900;
+  cursor:pointer;
+  font-family: serif;
+  white-space: nowrap;
 }
-.lo{ color:var(--secondary-color) ;}
-nav >ul{ 
-        margin-left: 190px;
-       list-style: none;
-       display: flex;
-       float:left;
-    }
-nav>ul>li{
-    display:inline-block;
-    padding:20px;
-}
-nav>ul>li>a{
-    text-decoration: none;
-    color: var(--secondary-color)  ;
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-   
+.lo{ color:var(--secondary-color); }
+
+/* Dark mode icon/button */
+#icon{
+  width:30px;
+  height:30px;
+  cursor:pointer;
 }
 
-/****** Contact buton*******/
- .contact{
-     border:2px var(--secondary-color)  solid;
-     color: var(--primary-color);
-     background-color:var(--secondary-color)  ;
-     padding:5px;
-     border-radius: 10px;
-     
- }
- .contact:hover{
-    background-color:rgba(236,203,54,0.1);
-    color:var(--secondary-color) ;
- }
- a:hover{
-     color:black;
- }
- /*** line hover under the nav bar***/
- nav .aa::before {
-    content: '';
-    display: table;
-    height: 2px;
-    background-color: var(--secondary-color) ;
-    position: absolute;
-    bottom: -5px;
-    width: 0%;
-    transition: all ease-in-out 250ms;
-  }
-  
-  nav .aa:hover::before {
-    width: 100%;
-  }
+/* Nav desktop */
+nav{
+  margin-left: auto;
+}
 
+nav > ul{
+  list-style: none;
+  display:flex;
+  align-items:center;
+  gap: 18px;
+}
 
- /************************************
-     Home page
-*************************************/
+nav > ul > li{
+  display:inline-block;
+}
+
+nav > ul > li > a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 2px;
+}
+
+/* Contact button */
+.contact{
+  border:2px var(--secondary-color) solid;
+  color: var(--primary-color);
+  background-color:var(--secondary-color);
+  padding:6px 10px;
+  border-radius: 10px;
+}
+
+.contact:hover{
+  background-color:rgba(236,203,54,0.1);
+  color:var(--secondary-color);
+}
+
+a:hover{ color:black; }
+
+/* underline hover */
+nav .aa::before{
+  content: '';
+  display:block;
+  height: 2px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  transition: width 250ms ease-in-out;
+}
+
+nav .aa:hover::before{
+  width: 100%;
+}
+
+/* Hamburger (only for mobile/tablet if you added it in HTML) */
+.hamburger{
+  display:none;
+  margin-left: auto;
+  width: 34px;
+  height: 28px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.hamburger span{
+  display:block;
+  height: 3px;
+  width: 100%;
+  background: var(--secondary-color);
+  border-radius: 3px;
+  margin: 5px 0;
+  transition: 0.25s ease;
+}
+.hamburger.active span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+.hamburger.active span:nth-child(2){ opacity: 0; }
+.hamburger.active span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+
+/* ================= SECTION BASE ================= */
+/* KEY FIX: remove fixed heights; use padding + min-height so content can grow */
+#home,#about,#teaching,#research,#blog,#contact{
+  width:100%;
+  min-height: 520px;
+  padding-top: calc(var(--header-h) + 40px);
+  padding-bottom: 90px; /* prevents overlap into next section */
+  position: relative;
+}
+
+/* ================= HOME ================= */
 #home{
-    background-color: var(--primary-color);
-    width:100%;
-    height:600px;
-    
+  background-color: var(--primary-color);
 }
-.p1{
-    padding-top: 100px;
-    padding-left: 100px;
-    color:var(--secondary-color)  ;
-    font-weight: bold;
-  }
-  
-.p2{
-    position: absolute;
-    top:150px;
-    color: var(--forth-color) ;
-    padding-left: 100px;
-    font-size: 80px;
-      font-weight: 900;}
-  
-.p3{
-   color: var(--forth-color) ;
-   width: 400px;
-   position:absolute;
-   top:330px;
-   padding-left: 100px;
-   font-weight: lighter;
-   font-size: 15px ;
-   
-  }
-  
+
 #beg{
-    height:400px;
-    background-color: var(--primary-color);
-    display: inline-block;
-    width:100%;
-    
-  }
+  width:100%;
+  min-height: 520px;
+  position: relative;
+}
+
+/* keep your desktop layout */
+.p1{
+  padding-top: 60px;
+  padding-left: 100px;
+  color:var(--secondary-color);
+  font-weight: 700;
+}
+
+.p2{
+  position: absolute;
+  top: 120px;
+  left: 0;
+  padding-left: 100px;
+  color: var(--forth-color);
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.p3{
+  color: var(--forth-color);
+  width: 430px;
+  position:absolute;
+  top: 300px;
+  left: 0;
+  padding-left: 100px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 .boxphoto{
-      border:var(--secondary-color)  2px solid;
-      width: 200px;
-      height:300px;
-      margin-left: 800px;
-      background-color: var(--secondary-color)  ;
-      border-top-left-radius: 200px;
-      border-top-right-radius: 200px;
-      z-index: 1;
-      
-    }
-.boxphot,.img1{
-        
-        width: 200px;
-        height:300px;
-        margin-left: -50px;
-        margin-top:30px ;
-        border-top-left-radius: 200px;
-        border-top-right-radius: 200px;
-        transition: transform .2s;}
+  border:var(--secondary-color) 2px solid;
+  width: 250px;
+  height: 350px;
+  background-color: var(--secondary-color);
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  overflow: hidden;
 
-.boxphoto:hover{ transform: scale(1.2);}
-/************************************
-     About
-*************************************/
+  position: absolute;
+  top: 90px;
+  right: 120px;
 
+  transition: transform .2s;
+}
+
+.img1{
+  width: 250px;
+  height:350px;
+  object-fit: cover;
+  margin-left: -50px;
+  margin-top:30px;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+}
+
+.boxphoto:hover{ transform: scale(1.06); }
+
+/* ================= ABOUT ================= */
 #about{
-    background-color: var(--third-color) ;
-    width:100%;
-    height:600px;
-}
-.about{width:100%;
-    height:500px;
-    position:relative;
-    top:80px;
-
+  background-color: var(--third-color);
 }
 
-.boxfig2{
-    position:absolute;
-    border: 2px solid var(--primary-color) ;
-width:250px;
-height:350px;
-margin-left:100px;
-margin-top:80px;
-background-color: var(--primary-color) ;
-transform: rotate(-20deg);
-
+.about{
+  width:100%;
+  min-height:500px;
+  /* IMPORTANT FIX: remove top:80px so it doesn't overlap other sections */
+  margin-top: 0;
+  position: relative;
 }
-.card {
-    
-    width: 250px;
-    height: 350px;
-    margin-left:100px;
-    margin-top:80px;
-    background: #fff;
-    box-shadow: 0 0px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-  }
 
-  
-  .dots {
-    background-color: var(--primary-color);
+.card{
+  width: 250px;
+  height: 350px;
+  margin-left:100px;
+  margin-top:40px;
+  background: #fff;
+  box-shadow: 0 0px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.dots{
+  background-color: var(--primary-color);
   background-image: radial-gradient(white 15%, transparent 16%),
-  radial-gradient(white 15%, transparent 16%);
+                    radial-gradient(white 15%, transparent 16%);
   background-size:60px 60px;
   background-position: 0 0, 30px 30px;
-  }
+}
 
 .image2{
-position:absolute;
-width:250px;
-height:350px;
-margin-left:100px;
-margin-top:-5px;
-transform: rotate(-10deg);
+  position:absolute;
+  width:250px;
+  height:350px;
+  margin-left:100px;
+  margin-top:-5px;
+  transform: rotate(-10deg);
+  object-fit: cover;
 }
+
+.pabt{
+  position:absolute;
+  width:520px;
+  margin-top:-270px;
+  margin-left:600px;
+  font-size: 15px;
+  color:var(--forth-color);
+  line-height: 1.7;
+}
+
+.btn{
+  position:absolute;
+  margin-top:-120px;
+  margin-left:600px;
+  width:520px;
+  height:auto;
+  display:flex;
+  gap: 14px;
+  align-items:center;
+}
+
+.bt1,.bt2{
+  display:inline-block;
+  text-align: center;
+  border: 2px var(--secondary-color) solid;
+  padding:10px 14px;
+  border-radius: 10px;
+  cursor:pointer;
+  width:170px;
+}
+
 .bt1{
-    text-align: center;
-    position:absolute;
-    border: 2px var(--secondary-color)  solid;
-    background-color: var(--secondary-color) ;
-    color:var(--third-color) ;
-    padding:10px 10px;
-    border-radius: 10px;
-    cursor:pointer;
+  background-color: var(--secondary-color);
+  color:var(--third-color);
 }
 
 .bt2{
-    text-align: center;
-    position:absolute;
-    border: 2px var(--secondary-color)  solid;
-    color: var(--secondary-color) ;
-    background-color:var(--third-color) ;
-    padding:10px 10px;
-    border-radius: 10px;
-    cursor:pointer;}
-
-
-.bt2{margin-left: 200px;
-    width:150px;
-}
-.bt1{
-    width:150px;
+  color: var(--secondary-color);
+  background-color:var(--third-color);
+  text-decoration: none;
 }
 
-
-.btn{
-    position:absolute;
-    margin-top:-150px;
-    margin-left:600px;
-    width:50%;
-    height:60px;
-   
+.bt1:hover{
+  color:var(--secondary-color);
+  background-color: rgba(236,203,54,0.1);
 }
-.pabt{ position:absolute;
-    width:500px;
-    height:200px;
-    margin-top:-300px;
-    margin-left:600px;
-    font-size: 15px;
-    font-weight: -10px;
-    color:var(--forth-color) ;}
+.bt2:hover{
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+}
 
-    .bt1:hover{
-        color:var(--secondary-color) ;
-        background-color: rgba(236,203,54,0.1) ;
-    }
-    .bt2:hover{
-        color: var(--third-color) ;
-        background-color: var(--secondary-color)  ;
-    }
-
-/************************************
-     Teaching
-*************************************/
-
+/* ================= TEACHING ================= */
 #teaching{
-    background-color: var(--primary-color) ;
-    width:100%;
-    height:700px;
+  background-color: var(--primary-color);
 }
 
-.teaching{width:100%;
-    border:transparent 2px solid;
-    height:500px;
-    position:relative;
-    top:80px;}
-.pt{ color:var(--secondary-color) ;
-    font-size: 20px;
-    text-align: center;
-    margin-top:20px;
-
+.teaching{
+  width:100%;
+  min-height:500px;
+  margin-top: 0; /* remove top:80 */
+  position: relative;
 }
-.pt1{color:var(--forth-color) ;
-    font-size:25px;
-    text-align: center;
-    margin-top:20px;
 
+.pt{
+  color:var(--secondary-color);
+  font-size: 20px;
+  text-align: center;
+  margin-top:10px;
+}
+
+.pt1{
+  color:var(--forth-color);
+  font-size:25px;
+  text-align: center;
+  margin-top:12px;
 }
 
 .parent{
-    padding-top:20px;
-    padding-left: 205px;
-    display: grid;
-    grid: 235px 235px/ 240px 240px 240px;
-    row-gap: 20px;
-    column-gap:40px;
-    text-align: center;
+  margin: 30px auto 0;
+  width: min(1100px, 92vw);
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 30px;
+  text-align: center;
 }
+
 .child1{
-    padding-top: 20px;
-    border:2px var(--third-color)  solid;
-    background-color: var(--third-color) ;
-    color:var(--forth-color) ;
-    transition: transform .2s;
+  padding: 18px 14px;
+  border:2px var(--third-color) solid;
+  background-color: var(--third-color);
+  color:var(--forth-color);
+  transition: transform .2s;
+  border-radius: var(--radius);
 }
+
+.child1:hover{ transform: scale(1.03); }
+
+.e{
+  margin-top: 12px;
+  width:120px;
+  height:120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .get{
-    margin-top: 5px;
-    margin-left:20px;
-    margin-bottom: 5px;
-    border: 2px solid var(--secondary-color) ;
-    background-color: var(--secondary-color) ;
-    color:var(--third-color) ;
-    width:180px;
-    padding:5px 5px;
-    font-size: 15px;
-    border-radius: 10px;
-    cursor:pointer;
+  margin: 14px auto 0;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  color:var(--third-color);
+  width:180px;
+  padding:7px 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor:pointer;
 }
-.e{ margin-top: 10px;
-    width:120px;
-    height:120px;
-}
+
+.get a{ color: inherit; text-decoration:none; }
+
 .get:hover{
-    color:var(--secondary-color) ;
-    background-color:var(--third-color)  ;
-}
-.child1:hover{ transform: scale(1.1);}
-.chil{
-    margin-left: 200px!important;
+  color:var(--secondary-color);
+  background-color:var(--third-color);
 }
 
-
-/************************************
-     Research
-*************************************/
-
+/* ================= RESEARCH ================= */
 #research{
-    background-color: var(--third-color) ;
-    width:100%;
-    height:600px;
+  background-color: var(--third-color);
 }
 
-.research{width:100%;
-    height:500px;
-    position:relative;
-    top:80px;
-
+.research{
+  width:100%;
+  min-height:500px;
+  margin-top: 0; /* remove top:80 */
+  position: relative;
 }
+
+.v1,.v2{
+  display:inline-block;
+  width: min(520px, 92vw);
+  margin: 20px 12px 0;
+  vertical-align: top;
+}
+
+.research video,
 video{
-    margin-top: 30px;
-    margin-left:350px;
-    height:100px;
-    width: 40%;
+  width: 100%;
+  height: auto;          /* IMPORTANT FIX */
+  border-radius: 12px;
 }
+
 .paper{
-    margin-top: 10px;
-    margin-left:130px;
-    height:200px;
-    width:80%;
-    text-align: center;
-    color:var(--forth-color) ;
-    font-size: 15px;
-    justify-content: center;
+  margin: 20px auto 0;
+  width: min(950px, 92vw);
+  text-align: center;
+  color:var(--forth-color);
+  font-size: 15px;
+  line-height: 1.75;
 }
+
 .ref{
-    color:var(--secondary-color) ;
+  color:var(--secondary-color);
+  font-weight: 700;
 }
 
-/************************************
-     Blog
-*************************************/
-
+/* ================= BLOG ================= */
 #blog{
-    background-color: var(--primary-color);
-    width:100%;
-    height:600px;
-  
+  background-color: var(--primary-color);
 }
-.blog{width:100%;
-    height:500px;
-    position:relative;
-    top:80px;}
+
+/* IMPORTANT FIX: remove top:80 and fixed width padding that causes overlap */
+.blog{
+  width:100%;
+  min-height:500px;
+  margin-top: 0;
+  position: relative;
+}
+
+.triangle-right{
+  margin: 20px auto 0;
+  width: 0;
+  height: 0;
+  border-top: 80px solid transparent;
+  border-left: min(92vw, 1100px) solid var(--secondary-color);
+  border-bottom: 80px solid transparent;
+}
+
 .blogwriting{
-    padding-top: 20px;
-    padding-left: 350px;
-   
-    width:800px;
-    font-size: 23px;
-    color:var(--forth-color) ;
-}
-.triangle-right {
-    margin-top:2px;
-	width: 0px;
-	height: 0px;
-	border-top: 100px solid transparent;
-	border-left: 1250px solid var(--secondary-color) ;
-	border-bottom: 100px solid transparent;
+  margin: 18px auto 0;
+  width: min(950px, 92vw);
+  padding: 18px 16px;
+  font-size: 22px;
+  color:var(--forth-color);
+  line-height: 1.6;
 }
 
-/************************************
-     Contact forms
-*************************************/
+/* ================= CONTACT ================= */
 #contact{
-    background-color: var(--third-color) ;
-    width:100%;
-    height:600px;
-    
+  background-color: var(--third-color);
 }
- /****** Text ******/
+
+/* The main cause of collapse here was absolute positioning + negative margins.
+   This layout uses normal flow + a two-column grid on desktop. */
+#contact > div{
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px 40px;
+  align-items: start;
+}
+
+/* Title full width */
 .barH{
-    height:450px;
-    color: var(--secondary-color) ;
-    font-size: 35px;
-    margin-left: 26px;
-    padding: 1px 1px;
-    position:relative;
-    top:90px;}
-.barH::before {
-    content: '';
-    display: table;
-    height: 2px;
-    background-color: var(--secondary-color) ;
-    position: absolute;
-    bottom: 400px;
-    width: 5%;}
+  grid-column: 1 / -1;
+  color: var(--secondary-color);
+  font-size: 35px;
+  margin: 0;
+  position: static; /* IMPORTANT FIX */
+}
+
+.barH::before{
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--secondary-color);
+  width: 140px;
+  margin-top: 10px;
+}
+
+/* Left text */
 .fm1{
-   
-    width:40%;
-    height:100px;
-    position:absolute;
-    margin-top: -300px;
-    color: var(--forth-color) ;
-    padding-left:70px;}
-   
- 
+  grid-column: 1 / 2;
+  width: 100%;
+  position: static; /* IMPORTANT FIX */
+  margin: 0;
+  padding: 0;
+  color: var(--forth-color);
+}
+
+/* Form on right */
 .pp{
-   
-   border:2px solid var(--secondary-color) ;
-   background-color: white;
-   padding: 20px 20px;
-   width:280px;
-   height:420px;
-   position:absolute;
-   margin-left: 800px;
-   margin-top:-420px;
-   border-radius: 5%;}
-.m1{color:var(--secondary-color) ;
-    position: relative;
-    bottom:10px ;
-    margin-left: 70px;
-    font-size: 20px;
-    }
-.m2{color:var(--secondary-color) ;
-    position: relative;
-    bottom:6px ;
-    margin-top:5px;
-    margin-bottom: 5px;
-    margin-right:20px;
-    margin-left: 50px;
-    font-size: 20px;}
-        
-#email{margin-top: 20px;
-    width: 97%;
-    height: 25px;
-    border:1px var(--secondary-color)  solid;}
-#name{margin-top: 15px;
-    width: 97%;
-    height: 25px;
-    border:1px var(--secondary-color)  solid;}
-#message{margin-top: 0px;
-    width: 97%;
-    border:1px var(--secondary-color)  solid;}
+  grid-column: 2 / 3;
+  border:2px solid var(--secondary-color);
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  min-height: 420px;
+  position: static; /* IMPORTANT FIX */
+  margin: 0;
+  border-radius: 18px;
+}
+
+.m1{
+  color:var(--secondary-color);
+  text-align:center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.m2{
+  color:var(--secondary-color);
+  margin: 10px 0 6px;
+  font-size: 18px;
+}
+
+/* Inputs */
+#email,#name,#message{
+  width: 100%;
+  border:1px var(--secondary-color) solid;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+#email{ margin-top: 10px; height: 36px; }
+#name{ margin-top: 10px; height: 36px; }
+#message{ margin-top: 6px; }
+
 #submit{
-    margin-top: 0px;
-    margin-left: 100px;
-    color:var(--primary-color);  
-    border-radius: 10px;
-    border:2px solid var(--secondary-color) ;
-    background-color:var(--secondary-color) ;
-    width:100px;
-    height:30px;}
-#submit:hover{ color:var(--secondary-color) ;
-    background-color: var(--primary-color); }
-/**********Emoji **********/
-.coordinates{
-   
-    width:30px;
-    height:200px;
-    color:var(--secondary-color) ;
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    justify-content: space-around;
-    position: absolute;
-    margin-top:-200px;
-    margin-left:27px;}
-.coordinate{ color:black;
-    width:400px;
-    height:200px;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    margin-top:-200px;
-    margin-left:100px;}
+  margin-top: 12px;
+  color:var(--primary-color);
+  border-radius: 10px;
+  border:2px solid var(--secondary-color);
+  background-color:var(--secondary-color);
+  width:100%;
+  height:38px;
+  cursor:pointer;
+  font-weight: 700;
+}
+#submit:hover{
+  color:var(--secondary-color);
+  background-color: var(--primary-color);
+}
 
-/************ emoji social media*****************/    
+/* Hide the old separate icon column to avoid layout conflicts */
+.coordinates{ display:none; }
 
+/* Contact lines with labels (replaces the icon column cleanly) */
+.coordinate{
+  grid-column: 1 / 2;
+  width: 100%;
+  position: static;
+  margin: 0;
+  color: var(--forth-color);
+  font-size: 18px;
+}
+.coordinate > div{ margin: 10px 0; }
+.coordinate > div:nth-child(1)::before{ content: "Tel: "; color: var(--secondary-color); font-weight: 700; }
+.coordinate > div:nth-child(2)::before{ content: "Email: "; color: var(--secondary-color); font-weight: 700; }
+.coordinate > div:nth-child(3)::before{ content: "Address: "; color: var(--secondary-color); font-weight: 700; }
 
-    .emoji{
-        position: absolute;
-        margin-top: 20px;
-        margin-left: -30px;}
-    .emo {
-        border: 2px transparent solid;
-        position: relative;
-        display: flex;
-        transform: rotate(0deg) skew(0deg);
-        transform-style: preserve-3d;
-    }
-    
-    .emo li {
-        position: relative;
-        list-style: none;
-        width: 60px;
-        height: 60px;
-        margin: 0px 40px;
-    }
-    
-    
-    .emo li span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex !important;
-        background: transparent; /*#2a2a2a;*/
-        justify-content: center;
-        align-items: center;
-        color: var(--secondary-color)  ;
-        font-size: 30px !important;
-        transition: 1.5s ease-out;
-    }
-    
-    .emo li:hover span {
-        z-index: 1000;
-        transition: .6s;
-        color: var(--forth-color) ;
-        box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);
-    }
-    
-    .emo li:hover span:nth-child(5) {
-        transform: translate(40px, -40px);
-        opacity: 1;
-    }
-    
-    .emo li:hover span:nth-child(4) {
-        transform: translate(30px, -30px);
-        opacity: .8;
-    }
-    
-    .emo li:hover span:nth-child(3) {
-        transform: translate(20px, -20px);
-        opacity: .6;
-    }
-    
-    .emo li:hover span:nth-child(2) {
-        transform: translate(10px, -10px);
-        opacity: .4;
-    }
-    
-    .emo li:hover span:nth-child(1) {
-        transform: translate(0px, 0px);
-        opacity: .2;
-    }
-    
-    .emo li:nth-child(1):hover span {
-        background: #1DA1F2 !important;
-        box-shadow: 0px 5px 12px #1da0f27a;
-    }
-    
-    .emo li:nth-child(2):hover span {
-        background: #2C3456 !important;
-        box-shadow: 0px 5px 12px #2c3456c4;
-    }
-    
-    .emo li:nth-child(3):hover span {
-        background: #8a3ab9 !important;
-        box-shadow: 0px 5px 12px #8a3ab9b6;
-    }
-    
-    .emo li:nth-child(4):hover span {
-        background: #0e76a8 !important;
-        box-shadow: 0px 5px 12px #0e77a8b9;
-    }
-    
-    .emo li:nth-child(5):hover span {
-        background: #c9510c !important;
-        box-shadow: 0px 5px 12px #c9510c5d;
-    }
+.coordinate a{ color: var(--secondary-color); text-decoration:none; }
 
-    .foot{
-    background-color: var(--primary-color);
+/* Social */
+.emoji{
+  grid-column: 1 / -1;
+  position: static;
+  margin: 10px 0 0;
+}
+
+.emo{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Works for BOTH your old spans and new <i> icons */
+.emo li{
+  width: 60px;
+  height: 60px;
+}
+.emo li a{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  border-radius: 16px;
+  border: 2px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.25);
+}
+.emo li a i{
+  font-size: 28px;
+  color: var(--secondary-color);
+}
+.emo li a:hover{
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+/* If you still have the old span layers, hide them to prevent weird stacking */
+.emo li span{ display:none !important; }
+
+/* Footer: NOT absolute (absolute footer is a classic overlap cause) */
+.foot{
+  grid-column: 1 / -1;
+  background-color: var(--primary-color);
+  width:100%;
+  position: static;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+.copyright{
+  color:var(--secondary-color);
+  text-align:center;
+  font-size: 15px;
+}
+
+.coeur{ color:red; }
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px){
+  header{ padding: 0 var(--pad-mobile); }
+
+  /* hamburger mode (if your HTML has it + JS toggles nav.active) */
+  .hamburger{ display:block; }
+  nav{
+    display:none;
+    position:absolute;
+    top: var(--header-h);
+    left:0;
     width:100%;
-    height:80px;
-    border: 2px solid var(--primary-color);
-    width: 100%;
-    height:50px ;
-    position: absolute;
-        margin-top: 100px;
-        margin-left: 0px;
-    }
-    .copyright{
-        color:var(--secondary-color) ;
-        text-align: center;
-        margin-top: 20px;
-        font-size: 15px;
-    }
-    .coeur{
-        color:red;
-    }
+    background: var(--third-color);
+    padding: 12px var(--pad-mobile);
+  }
+  nav.active{ display:block; }
+  nav > ul{
+    flex-direction:column;
+    align-items:stretch;
+    gap: 8px;
+  }
+  nav > ul > li > a{
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  /* Home: stop absolute layout from breaking on tablet */
+  .p1,.p2,.p3{ position: static; padding-left: var(--pad-mobile); width: auto; }
+  .p2{ font-size: 48px; margin-top: 8px; }
+  .p3{ max-width: 92vw; margin-top: 10px; }
+  .boxphoto{ position: static; margin: 22px auto 0; }
+
+  /* About: stack */
+  .card{ margin: 20px auto 0; }
+  .image2{ position: static; margin: 12px auto 0; transform: none; display:block; }
+  .pabt,.btn{ position: static; margin: 18px auto 0; width: min(92vw, 650px); }
+  .btn{ justify-content:center; flex-wrap: wrap; }
+
+  /* Teaching: 2 columns */
+  .parent{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+  /* Blog text size */
+  .blogwriting{ font-size: 18px; }
+
+  /* Contact becomes 1 column */
+  #contact > div{
+    grid-template-columns: 1fr;
+  }
+  .pp{ grid-column: 1 / -1; max-width: 520px; }
+  .fm1,.coordinate{ grid-column: 1 / -1; }
+}
+
+/* Phone */
+@media (max-width: 600px){
+  .p2{ font-size: 40px; }
+  .parent{ grid-template-columns: 1fr; }
+}
