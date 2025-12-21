@@ -310,7 +310,7 @@ nav .aa:hover::before{
   /* CV BUTTON */
   .hero-btn { 
     position: absolute !important;
-    top: 280px !important;
+    top: 255px !important;
     left: 20px !important;
     right: 20px !important;
     width: auto !important;
@@ -328,7 +328,7 @@ nav .aa:hover::before{
   /* PHOTO - JUST UNDER CV (300px gap) */
   .boxphoto {
     position: absolute !important;
-    top: 360px !important;     /* CV@280px + 80px = 360px */
+    top: 315px !important;     /* CV@280px + 80px = 360px */
     left: 50% !important;      /* CENTERED */
     transform: translateX(-50%) !important;
     right: auto !important;
