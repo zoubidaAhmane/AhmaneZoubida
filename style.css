@@ -184,6 +184,14 @@ nav .aa:hover::before{
 }
 
 /* ================= HOME ================= */
+
+
+
+
+
+
+
+
 #home{
   background-color: var(--primary-color);
 }
@@ -252,6 +260,98 @@ nav .aa:hover::before{
 }
 
 .boxphoto:hover{ transform: scale(1.06); }
+
+
+
+
+
+/* Hero CV button - Prominent */
+.hero-btn {
+  position: absolute;
+  top: 420px;
+  left: 0;
+  padding-left: 100px;
+  width: 430px;
+  animation: slideInUp 0.8s ease-out 0.5s both;
+}
+
+.hero-cv {
+  padding: 16px 32px !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 25px rgba(230,147,157,0.4);
+  background: var(--secondary-color) !important;
+  color: white !important;
+  border-radius: 12px;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-cv:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(230,147,157,0.6) !important;
+  background: #d67a89 !important;
+}
+
+.hero-cv:active {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 8px 25px rgba(230,147,157,0.5) !important;
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+/* MOBILE - Photo JUST under CV */
+@media (max-width: 768px) {
+  /* CV BUTTON */
+  .hero-btn { 
+    position: absolute !important;
+    top: 280px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+    padding-left: 0 !important;
+  }
+  
+  .hero-cv { 
+    padding: 14px 28px !important; 
+    font-size: 16px !important;
+    display: block !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  /* PHOTO - JUST UNDER CV (300px gap) */
+  .boxphoto {
+    position: absolute !important;
+    top: 360px !important;     /* CV@280px + 80px = 360px */
+    left: 50% !important;      /* CENTERED */
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    width: 200px !important;
+    height: 280px !important;
+  }
+  
+  .img1 {
+    width: 200px !important;
+    height: 280px !important;
+    margin-left: -45px !important;
+    margin-top: 28px !important;
+  }
+  
+  /* Text */
+  .p2 { top: 100px !important; font-size: 50px !important; }
+  .p3 { top: 220px !important; width: 90% !important; padding-left: 20px !important; }
+}
+
+
+
+
+
 
 /* ================= ABOUT ================= */
 #about{
