@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z. Ahmane | Plasma Astrophysics | Univ Batna 1</title>
-    <meta name="description" content="Plasma astrophysics, protostellar jets, Herbig-Haro simulations, DG Tau HST/STIS spectroscopy.">
-    
+    <title>  Zoubida Ahmane</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--link to fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <!--link for emoji-->
+    <script src="https://kit.fontawesome.com/12c29c871e.js" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+      <script type="text/javascript"
+        src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+
 </head>
 <body>
-    <!-- HEADER WITH HAMBURGER -->
+    <!---------------------
+    --Header & Nav bar-----
+    ----------------------->
     <header>
-        <div class="logo"><span class="lo">Z. Ahmane</span></div>
-        
-        <!-- HAMBURGER MOBILE MENU -->
-        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        
+        <div class="logo"> <span class="lo" >Dz</span> <span> Coder</span></div>
         <nav>
             <ul>
                 <li><a class="aa" href="#home">Home</a></li>
@@ -34,179 +34,276 @@
                 <li><a class="aa" href="#blog">Blog</a></li>
                 <li><a class="contact" href="#contact">Contact</a></li>
             </ul>
+    
+             <img id="icon" src="moon.png" alt="">
         </nav>
-        
-        <img id="icon" src="moon.png" alt="Toggle dark/light mode">
+    <!---------------------
+    -End Header & Nav bar--
+    ----------------------->
     </header>
-
-    <!-- HOME -->
-    <section id="home" class="section">
-        <div class="hero-content">
-            <h1 class="hero-title">Hello There</h1>
-            <h2 class="hero-name">I am Zoubida</h2>
-            <p class="hero-desc">Associate Professor at Physics Department, University of Batna 1. Theoretical astrophysics focusing on plasma modeling.</p>
-            <div class="hero-image">
-                <img class="profile-img" src="a.png" alt="Z. Ahmane portrait">
-            </div>
+<!---------------------
+---------Home page-----
+----------------------->
+<div id="home">
+    
+    <div id="beg">
+        <p Class="p1" > Hello There  </p>
+        <p Class="p2" > I am Zoubida     </p>
+        <p class="p3" >  I am an Associate Professor at the Physics Department, Univeristy of Batna 1 Hadj Lakhdar. My main reasearch field is theoretical astrophysics focusing on plasma modeling.   </p>
+        <div class="boxphoto" >
+            <img  class="img1" src="a.png" alt="">
         </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="card dots">
-                        <img class="image2" src="fig2.jpg" alt="PhD defense photo">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>PhD in radiation physics & astrophysics (2020). Collaboration between Università degli Studi di Torino (Italy) & University of Batna 1 (Algeria).</p>
-                    <div class="btn-group">
-                        <a class="btn bt1">Read More</a>
-                        <a class="btn bt2" href="Simple-CV.pdf">Download CV</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TEACHING -->
-    <section id="teaching" class="section">
-        <div class="container">
-            <h2 class="section-title pt">Teaching</h2>
-            <h3 class="section-subtitle pt1">My Expertise</h3>
-            <div class="teaching-grid">
-                <div class="teaching-card">
-                    <div>Astrophysical fluid dynamics</div>
-                    <img class="e" src="images/a.jpg" alt="Fluid dynamics">
-                    <a class="get">Get Started</a>
-                </div>
-                <div class="teaching-card">
-                    <div>Numerical analysis</div>
-                    <img class="e" src="images/c.jpg" alt="Numerical analysis">
-                    <a class="get">Get Started</a>
-                </div>
-                <div class="teaching-card">
-                    <div>General Astrophysics</div>
-                    <img class="e" src="images/b.jpg" alt="Astrophysics">
-                    <a class="get">Get Started</a>
-                </div>
-                <div class="teaching-card">
-                    <div>Initiation to research</div>
-                    <img class="e" src="images/e.jpg" alt="Research">
-                    <a class="get" href="index1.html">Get Started</a>
-                </div>
-                <div class="teaching-card">
-                    <div>English for science</div>
-                    <img class="e" src="images/d.png" alt="English">
-                    <a class="get">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" class="section">
-        <div class="container">
-            <h2 class="section-title pt">Research</h2>
-            <h3 class="section-subtitle pt1">Recent Work</h3>
-            <div class="research-videos">
-                <video class="research-video" controls aria-label="High luminosity simulation">
-                    <source src="L32new.mp4" type="video/mp4">
-                </video>
-                <video class="research-video" controls aria-label="Low luminosity simulation">
-                    <source src="L28new.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="research-paper">
-                <p class="paper">Simulations of protostar-driven photoionization in Herbig-Haro Jets. High luminosity case ($L_X = 10^{32}$ erg/s, upper) vs low luminosity ($L_X = 10^{28}$ erg/s, lower). High case shows ~50% ionization near source. <span class="ref">[Z. Ahmane et al., 2020]</span></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="section">
-        <div class="container">
-            <h2 class="section-title pt">Blog</h2>
-            <h3 class="section-subtitle pt1">Lab Writing</h3>
-            <div class="blog-content">
-                <div class="triangle-right"></div>
-                <div class="blogwriting">
-                    <p>Physics in daily life, astronomy stories in Arabic/French/English. Front-end topics (CSS) and guest posts for publications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title barH">Get in Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="fm1">
-                        <p>Zoubida Ahmane<br>Department of Physics<br>Science Faculty<br>University of Batna 1</p>
-                    </div>
-                    <div class="coordinates">
-                        <i class="fas fa-envelope"></i>
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="coordinate">
-                        <a href="mailto:zoubida.ahmane@univ-batna.dz">zoubida.ahmane@univ-batna.dz</a>
-                        <div>Rte de Biskra, Batna 05000</div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <div class="pp">
-                        <h3 class="m1">Contact Me</h3>
-                        <form>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" required>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" required>
-                            <label for="message">Message:</label>
-                            <textarea id="message" rows="6" required></textarea>
-                            <button type="submit" id="submit">Send</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- SOCIAL ICONS -->
-            <div class="social-emoji">
-                <ul class="emo">
-                    <li><a href="mailto:zoubida.ahmane@univ-batna.dz" title="Email"><i class="fas fa-envelope"></i></a></li>
-                    <li><a href="https://twitter.com/zoubidaahmane" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://facebook.com/zoubidaahmane" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://github.com/zoubidaahmane" title="GitHub"><i class="fab fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <footer class="foot">
-            <p class="copyright">Made with <i class="fas fa-heart coeur"></i> in Batna, Algeria. &copy; 2025 Z. Ahmane</p>
-        </footer>
-    </section>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({offset: 200, duration: 800});
         
-        // DARK MODE
-        document.getElementById('icon').onclick = function() {
-            document.body.classList.toggle('dark-theme');
-            this.src = document.body.classList.contains('dark-theme') ? 'sun.png' : 'moon.png';
-        };
         
-        // HAMBURGER MENU
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('nav');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            nav.classList.toggle('active');
-            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('active'));
-        });
-    </script>
+    </div>
+</div>
+<!---------------------
+-----End Home page-----
+----------------------->
+
+
+<!---------------------
+-----About page--------
+----------------------->
+
+<div id="about">
+ <div class="about">
+   <div class="card dots"> <img class="image2" src="fig2.jpg" alt=""> </div>
+    <div class="pabt" data-aos="fade-left" >I did defend my PhD thesis on 23 rd, 
+        September 2020 for the degree of doctor in radiation
+        physics and astrophysics. It was under the specific 
+        collaboration agreement between università degli studi
+        di torino, Italy and Hadj Lakhdar university Batna,
+        Algeria. </div>  
+        
+    <div class="btn"> <span class="bt1"> Read More</span>
+        <span class="bt2" > Download my CV</span></div>
+ </div>
+
+</div>
+<!---------------------
+---End About page------
+----------------------->
+<!---------------------
+---Teaching  page------
+----------------------->
+
+<div id="teaching">
+<div class="teaching">
+    <div class="pt"> Teaching</div>
+    <div class="pt1"> My Expertise</div>
+    <div class="parent">
+        <div class="child1"> Astrophysical fluid dynamics 
+             <img class="e" src="images/a.jpg" alt="">
+              <div class="get"> Get Started</div>
+        </div>
+
+        <div class="child1">  Numerical analysis
+            <img class="e" src="images/c.jpg" alt="">
+            <div class="get"> Get Started</div>
+        </div>
+
+       
+        
+        
+        <div class="child1"> General Astrophysics 
+            <img class="e" src="images/b.jpg" alt="">
+            <div class="get"> Get Started</div>
+        </div>
+        <div class="child1 "> Initiation to research 
+            <img class="e" src="images/e.jpg" alt="">
+            <div class="get"> Get Started</div>
+        </div>
+        <div class="child1 "> 
+            <div> English for science</div>  
+            <img class="e" src="images/d.png" alt="">
+            <div class="get"> Get Started</div>
+        </div>
+        
+        
+        
+
+    </div>
+
+</div>
+
+</div>
+<!---------------------
+---End Teaching page---
+----------------------->
+<!---------------------
+---End Research page---
+----------------------->
+
+<div id="research">
+
+    <div class="research" >
+        <div class="pt"> Research</div>
+        <div class="pt1"> My Recent Work</div>
+
+       <div class="v1"> <video src="L32new.mp4" controls> </video>  </div>
+       <div class="v2"> <video src="L28new.mp4" controls ></video>  </div>
+       <div>
+           <p class="paper" data-aos="fade-down" data-aos-offset="200" data-aos-duration="800">
+            In this study I show Simulations of protostar-driven photoionization in Herbig-Haro Jets.
+            we compare two different evolutionary simulations, corresponding to a high luminosity
+             case ( $ L_{X} = 10^{32} erg/s \quad $, upper movie ) and a low 
+             luminosity case ($ L_{X} = 10^{28} erg/s \quad$ lower movie).
+              While the latter does not produce any noticeable difference 
+              in the amount of ionization when compared to the purely radiative 
+              case (see paper <span class="ref" > [Z.ahmane et al, 2020] </span> ), the former results in an appreciably larger ionization rate. 
+              Close to the central object we now observe almost $ \approx 50 \%$ ionization degree, 
+              lowering to  $\approx 10 \% \quad$ at large distances. Ions can survive large distance propagation 
+            owing to the rather long recombination scale.
+           </p>
+       </div>
+
+    </div>
+
+</div>
+
+<!---------------------
+---End Research page---
+----------------------->
+<!---------------------
+--- Blog  page---------
+----------------------->
+
+<div id="blog">
+  <div class="blog">
+    <div class="pt"> Blog</div>
+    <div class="pt1"> My LabWriting</div>
+<div class="triangle-right" data-aos="fade-right" data-aos-offset="200" data-aos-duration="800" ></div>
+<div class="blogwriting" data-aos="fade-left" data-aos-offset="200" data-aos-duration="800" >
+    <p >  I regularly write about physics in our daily life and  the amazing stories in the field of astronomy and astrophyics topics in arabic, french and english.
+        I also write about front end topics on my popular blog, CSS , and occasionally write guest posts for other publications.
+    </p>
+</div>
+</div>
+</div>
+
+<!---------------------
+---End Blog page---
+----------------------->
+
+<!---------------------
+-----Contact forms-----
+----------------------->
+<div id="contact">
+    <!--Text part-->
+    <div data-aos="fade-right" > <p class="barH"> Get in touch</p>
+    <div class="fm1" data-aos="fade-right" >
+        <p> Ahmane Zoubida <br> Departement of physics <br> Science of matter faculty <br> I am also active on social media you can find links, in the icon below </p>
+    </div>
+    <!--form part-->
+    
+    <div class="pp" data-aos="fade-left">
+        <div class="m1"> Contact Me</div>
+        <div><input type="text" placeholder="Name" id="name"></div>
+        <div><input type="email"  placeholder="Mail" id="email"></div>
+        <div class="m2"> <label for="message" >New message:</label></div>
+        <div><textarea  id="message" placeholder="Your message" cols="30" rows="10"></textarea> </div>
+        <input type="submit" id="submit" value="Confirm">
+    </div>
+    
+    
+    <!--My coordinates part-->
+    <div class="coordinates" >
+        <div>  <i class="fas fa-phone-alt"></i> </div>    
+        <div> <i class="fas fa-envelope"></i> </div>
+        <div> <i class="fas fa-map-marker-alt"></i> </div>
+    </div>
+    <div class="coordinate" >
+        <div>  (+213) 658000005    </div>
+        <div> zoubida.ahmane@univ-batna.dz </div>
+        <div> Rte de Biskra, Batna 05000 </div>
+    </div>
+    <!--Emoji for social media contact-->
+    <div class="emoji"  >
+        <ul class="emo">
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-twitter"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-facebook"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-instagram"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-github"></span>
+                </a>
+            </li>
+        </ul>
+    </div> 
+   
+   <div class="foot">
+<p class="copyright">   Made with  <span class="coeur"> <i class="fab fa-gratipay"></i>  </span> in Batna, Algeria.   <i class="fas fa-copyright"></i> 2021  Ahmane Zoubida </p>
+
+   </div>
+
+
+ <!--end-->
+    </div>
+
+</div>
+<!---------------------
+-end Contact forms-----
+----------------------->
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({offset: 400,
+  duration:1000});
+
+var icon = document.getElementById("icon");
+icon.onclick = function(){
+
+document.body.classList.toggle("dark-theme");
+if (document.body.classList.contains("dark-theme")){
+    icon.src ="sun.png";
+}
+  else{
+      
+    icon.src ="moon.png";  
+  }
+
+} 
+
+</script>
+
 </body>
 </html>
