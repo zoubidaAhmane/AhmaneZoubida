@@ -216,7 +216,7 @@ nav .aa:hover::before{
   left: 0;
   padding-left: 100px;
   color: var(--forth-color);
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.05;
 }
@@ -235,8 +235,8 @@ nav .aa:hover::before{
 
 .boxphoto{
   border:var(--secondary-color) 2px solid;
-  width: 250px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   background-color: var(--secondary-color);
   border-top-left-radius: 200px;
   border-top-right-radius: 200px;
@@ -250,10 +250,10 @@ nav .aa:hover::before{
 }
 
 .img1{
-  width: 250px;
-  height:350px;
+  width: 400px;
+  height:450px;
   object-fit: cover;
-  margin-left: -50px;
+  margin-left: 0px;
   margin-top:30px;
   border-top-left-radius: 200px;
   border-top-right-radius: 200px;
