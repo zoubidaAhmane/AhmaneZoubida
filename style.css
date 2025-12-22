@@ -250,8 +250,8 @@ nav .aa:hover::before{
 }
 
 .img1{
-  width: 800px;
-  height:450px;
+  width: 400px;
+  height:390px;
   object-fit: cover;
   margin-left: 0px;
   margin-top:30px;
