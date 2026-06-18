@@ -174,26 +174,33 @@ nav .aa:hover::before{
 .hamburger.active span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
 
 /* ================= SECTION BASE ================= */
-/* KEY FIX: remove fixed heights; use padding + min-height so content can grow */
 #home,#about,#teaching,#research,#blog,#contact{
   width:100%;
   min-height: 520px;
   padding-top: calc(var(--header-h) + 40px);
-  padding-bottom: 90px; /* prevents overlap into next section */
+  padding-bottom: 90px; 
   position: relative;
 }
 
-/* ================= HOME ================= */
+/* ================= ABOUT / HERO CONTAINER ================= */
+/* ================= ABOUT / HERO CONTAINER ================= */
+#about{
+  background-image: linear-gradient(
+      rgba(237, 220, 217, 0.45), 
+      rgba(237, 220, 217, 0.55) 
+    ), 
+    url('elon.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
 
-
-
-
-
-
-
-
-#home{
-  background-color: var(--primary-color);
+body.dark-theme #about {
+  background-image: linear-gradient(
+      rgba(30, 30, 32, 0.45), 
+      rgba(30, 30, 32, 0.55)
+    ), 
+    url('elon.jpg');
 }
 
 #beg{
@@ -261,10 +268,6 @@ nav .aa:hover::before{
 
 .boxphoto:hover{ transform: scale(1.06); }
 
-
-
-
-
 /* Hero CV button - Prominent */
 .hero-btn {
   position: absolute;
@@ -304,10 +307,8 @@ nav .aa:hover::before{
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile */
 /* MOBILE - Photo JUST under CV */
 @media (max-width: 768px) {
-  /* CV BUTTON */
   .hero-btn { 
     position: absolute !important;
     top: 255px !important;
@@ -325,11 +326,10 @@ nav .aa:hover::before{
     margin: 0 auto;
   }
   
-  /* PHOTO - JUST UNDER CV (300px gap) */
   .boxphoto {
     position: absolute !important;
-    top: 315px !important;     /* CV@280px + 80px = 360px */
-    left: 50% !important;      /* CENTERED */
+    top: 315px !important;     
+    left: 50% !important;      
     transform: translateX(-50%) !important;
     right: auto !important;
     width: 200px !important;
@@ -343,105 +343,8 @@ nav .aa:hover::before{
     margin-top: 28px !important;
   }
   
-  /* Text */
   .p2 { top: 100px !important; font-size: 20px !important; }
   .p3 { top: 220px !important; width: 90% !important; padding-left: 20px !important; }
-}
-
-
-
-
-
-
-/* ================= ABOUT ================= */
-#about{
-  background-color: var(--third-color);
-}
-
-.about{
-  width:100%;
-  min-height:500px;
-  /* IMPORTANT FIX: remove top:80px so it doesn't overlap other sections */
-  margin-top: 0;
-  position: relative;
-}
-
-.card{
-  width: 250px;
-  height: 350px;
-  margin-left:100px;
-  margin-top:40px;
-  background: #fff;
-  box-shadow: 0 0px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-.dots{
-  background-color: var(--primary-color);
-  background-image: radial-gradient(white 15%, transparent 16%),
-                    radial-gradient(white 15%, transparent 16%);
-  background-size:60px 60px;
-  background-position: 0 0, 30px 30px;
-}
-
-.image2{
-  position:absolute;
-  width:250px;
-  height:350px;
-  margin-left:100px;
-  margin-top:-5px;
-  transform: rotate(-10deg);
-  object-fit: cover;
-}
-
-.pabt{
-  position:absolute;
-  width:520px;
-  margin-top:-270px;
-  margin-left:600px;
-  font-size: 15px;
-  color:var(--forth-color);
-  line-height: 1.7;
-}
-
-.btn{
-  position:absolute;
-  margin-top:-120px;
-  margin-left:600px;
-  width:520px;
-  height:auto;
-  display:flex;
-  gap: 14px;
-  align-items:center;
-}
-
-.bt1,.bt2{
-  display:inline-block;
-  text-align: center;
-  border: 2px var(--secondary-color) solid;
-  padding:10px 14px;
-  border-radius: 10px;
-  cursor:pointer;
-  width:170px;
-}
-
-.bt1{
-  background-color: var(--secondary-color);
-  color:var(--third-color);
-}
-
-.bt2{
-  color: var(--secondary-color);
-  background-color:var(--third-color);
-  text-decoration: none;
-}
-
-.bt1:hover{
-  color:var(--secondary-color);
-  background-color: rgba(236,203,54,0.1);
-}
-.bt2:hover{
-  color: var(--third-color);
-  background-color: var(--secondary-color);
 }
 
 /* ================= TEACHING ================= */
@@ -452,7 +355,7 @@ nav .aa:hover::before{
 .teaching{
   width:100%;
   min-height:500px;
-  margin-top: 0; /* remove top:80 */
+  margin-top: 0; 
   position: relative;
 }
 
@@ -526,7 +429,7 @@ nav .aa:hover::before{
 .research{
   width:100%;
   min-height:500px;
-  margin-top: 0; /* remove top:80 */
+  margin-top: 0; 
   position: relative;
 }
 
@@ -540,7 +443,7 @@ nav .aa:hover::before{
 .research video,
 video{
   width: 100%;
-  height: auto;          /* IMPORTANT FIX */
+  height: auto;          
   border-radius: 12px;
 }
 
@@ -563,7 +466,6 @@ video{
   background-color: var(--primary-color);
 }
 
-/* IMPORTANT FIX: remove top:80 and fixed width padding that causes overlap */
 .blog{
   width:100%;
   min-height:500px;
@@ -594,8 +496,6 @@ video{
   background-color: var(--third-color);
 }
 
-/* The main cause of collapse here was absolute positioning + negative margins.
-   This layout uses normal flow + a two-column grid on desktop. */
 #contact > div{
   width: min(1200px, 92vw);
   margin: 0 auto;
@@ -605,13 +505,12 @@ video{
   align-items: start;
 }
 
-/* Title full width */
 .barH{
   grid-column: 1 / -1;
   color: var(--secondary-color);
   font-size: 35px;
   margin: 0;
-  position: static; /* IMPORTANT FIX */
+  position: static; 
 }
 
 .barH::before{
@@ -623,17 +522,15 @@ video{
   margin-top: 10px;
 }
 
-/* Left text */
 .fm1{
   grid-column: 1 / 2;
   width: 100%;
-  position: static; /* IMPORTANT FIX */
+  position: static; 
   margin: 0;
   padding: 0;
   color: var(--forth-color);
 }
 
-/* Form on right */
 .pp{
   grid-column: 2 / 3;
   border:2px solid var(--secondary-color);
@@ -641,7 +538,7 @@ video{
   padding: 20px;
   width: 100%;
   min-height: 420px;
-  position: static; /* IMPORTANT FIX */
+  position: static; 
   margin: 0;
   border-radius: 18px;
 }
@@ -687,10 +584,8 @@ video{
   background-color: var(--primary-color);
 }
 
-/* Hide the old separate icon column to avoid layout conflicts */
 .coordinates{ display:none; }
 
-/* Contact lines with labels (replaces the icon column cleanly) */
 .coordinate{
   grid-column: 1 / 2;
   width: 100%;
@@ -723,7 +618,6 @@ video{
   margin: 0;
 }
 
-/* Works for BOTH your old spans and new <i> icons */
 .emo li{
   width: 60px;
   height: 60px;
@@ -748,10 +642,8 @@ video{
   transition: 0.2s;
 }
 
-/* If you still have the old span layers, hide them to prevent weird stacking */
 .emo li span{ display:none !important; }
 
-/* Footer: NOT absolute (absolute footer is a classic overlap cause) */
 .foot{
   grid-column: 1 / -1;
   background-color: var(--primary-color);
@@ -776,7 +668,6 @@ video{
 @media (max-width: 1024px){
   header{ padding: 0 var(--pad-mobile); }
 
-  /* hamburger mode (if your HTML has it + JS toggles nav.active) */
   .hamburger{ display:block; }
   nav{
     display:none;
@@ -798,17 +689,11 @@ video{
     border-radius: 12px;
   }
 
-  /* Home: stop absolute layout from breaking on tablet */
+  /* Home text configurations */
   .p1,.p2,.p3{ position: static; padding-left: var(--pad-mobile); width: auto; }
   .p2{ font-size: 48px; margin-top: 8px; }
   .p3{ max-width: 92vw; margin-top: 10px; }
   .boxphoto{ position: static; margin: 22px auto 0; }
-
-  /* About: stack */
-  .card{ margin: 20px auto 0; }
-  .image2{ position: static; margin: 12px auto 0; transform: none; display:block; }
-  .pabt,.btn{ position: static; margin: 18px auto 0; width: min(92vw, 650px); }
-  .btn{ justify-content:center; flex-wrap: wrap; }
 
   /* Teaching: 2 columns */
   .parent{ grid-template-columns: repeat(2, minmax(0,1fr)); }
