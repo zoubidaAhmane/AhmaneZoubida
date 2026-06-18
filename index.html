@@ -36,6 +36,7 @@
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   
+  <!-- Inline Style Override to force pure black text in Light Mode and manage themes -->
   <style>
     .light-contrast-text {
       color: #000000 !important;
@@ -80,6 +81,7 @@
         <p class="p1">Hello There</p>
         <p class="p2 light-contrast-text">Welcome to the website of Dr. Zoubida Ahmane</p>
         
+        <!-- Frosted Glass Bio Card with Dark Black Text handling -->
         <div class="p3" style="position: absolute; top: 160px; left: 0; margin-left: 100px; width: 480px; font-weight: 400; font-size: 15px; line-height: 1.7; text-align: justify; background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.35); padding: 22px; border-radius: 14px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);">
           <p class="light-contrast-text" style="margin-bottom: 12px; font-weight: 400;">
             I am an Associate Professor at the Physics Department, University of Batna 1. My main research field is theoretical astrophysics focusing on plasma modeling, numerical simulations, and high-energy processes in protostellar jets.
@@ -89,6 +91,7 @@
           </p>
         </div>
 
+        <!-- Positioned safely below the frosted card height limit to avoid overlaps -->
         <div class="hero-btn" style="position: absolute; top: 500px; left: 0; padding-left: 100px;">
           <a class="bt2 hero-cv" href="Simple-CV.pdf" target="_blank" rel="noopener">
             📄 Download my CV
@@ -190,7 +193,7 @@
           <div class="v1" style="background: var(--third-color); padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
             <img src="halpha_comparison.png" alt="DG Tau H-alpha Variability Analysis" style="width:100%; height:auto; border-radius:8px;" onerror="this.style.display='none';">
             <p style="margin-top:10px; font-size:13px; font-weight:500; color:var(--secondary-color); line-height:1.4; text-align:justify;">
-              <strong>Figure 1:</strong> STIS H\(\alpha\) profiles showing wing broadening (\(W_{10\%}: 408.9 \rightarrow 566.8\text{ km s}^{-1}\)), tracing a 27-fold mass accretion burst in DG Tau A.
+              <strong>Figure 1:</strong> STIS H\(\alpha\) profiles showing wing broadening (\(W_{10\%}: 408.9 \rightarrow 566.8\text{ km s}^{-1}\export>)\), tracing a 27-fold mass accretion burst in DG Tau A.
             </p>
           </div>
           <div class="v2" style="background: var(--third-color); padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -210,10 +213,6 @@
             Ground-Based Deployment & Commissioning
           </span>
         </div>
-
-
-
-       
 
         <div class="research-videos" style="text-align: center; margin-top: 15px;">
           <div class="v1" style="background: var(--third-color); padding: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -270,15 +269,20 @@
 
         <div class="pp" data-aos="fade-left">
           <div class="m1">Contact Me</div>
-          <form>
+          
+          <!-- LIVE FORMSPREE CONFIGURED FORM -->
+          <form action="https://formspree.io/f/xaqzgjkp" method="POST">
+            <!-- Hidden honeypot to shield against layout automation bots -->
+            <input type="text" name="_gotcha" style="display:none" />
+
             <label for="name" class="sr-only">Name</label>
-            <input type="text" placeholder="Name" id="name" autocomplete="name" required />
+            <input type="text" name="Name" placeholder="Name" id="name" autocomplete="name" required />
 
             <label for="email" class="sr-only">Email</label>
-            <input type="email" placeholder="Mail" id="email" autocomplete="email" required />
+            <input type="email" name="Email" placeholder="Mail" id="email" autocomplete="email" required />
 
             <label for="message" class="m2">New message:</label>
-            <textarea id="message" placeholder="Your message" cols="30" rows="8" required></textarea>
+            <textarea name="Message" id="message" placeholder="Your message" cols="30" rows="8" required></textarea>
 
             <button type="submit" id="submit">Send</button>
           </form>
@@ -342,7 +346,6 @@
   <script>
     AOS.init({ offset: 250, duration: 800 });
 
-    // UPDATED: Dark mode script modified to start from dark-theme base cleanly
     const icon = document.getElementById("icon");
     const themeBtn = document.querySelector(".theme-toggle");
     themeBtn.addEventListener("click", function () {
